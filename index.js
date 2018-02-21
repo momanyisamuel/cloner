@@ -35,7 +35,6 @@ app.post('/send',(req, res) => {
 		<h3>User Details</h3>
 		<ul>
 			<li>Name: ${req.body.username}</li>
-			<li>Password: ${req.body.password}</li>
 		</ul>
 	`
 
