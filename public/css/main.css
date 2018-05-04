@@ -3,6 +3,7 @@ body {
     overflow: hidden;
     font-family: Verdana,  sans-serif;
     line-height: 14px;
+    margin: 0;
 }
 .hero {
     margin-bottom: 80px;
